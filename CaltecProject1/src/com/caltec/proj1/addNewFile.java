@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class addNewFile {
-	
-	public boolean addingNewFile(String path)
+
+	public boolean addingNewFile(String path) throws IOException 
 	{
 		System.out.println("INSIDE adding new file FUNCTION");
-	//	String path="C:\\caltech\\";
+		//	String path="C:\\caltech\\";
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter file name to create: ");
 		String filename=sc.next();
@@ -17,6 +17,7 @@ public class addNewFile {
 		System.out.println(finalpath);
 		//create a file
 		File file=new File(finalpath);
+
 		boolean res = false;
 		try {
 			res = file.createNewFile();
